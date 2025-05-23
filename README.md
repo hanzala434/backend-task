@@ -57,8 +57,7 @@ uvicorn app.main:app --reload
 - Query Parameters:
   - start_date: Start date (YYYY-MM-DD)
   - end_date: End date (YYYY-MM-DD)
-  - product_id: (optional) Filter by product
-  - category: (optional) Filter by category
+
 
 #### GET /sales/revenue/aggregate
 - Analyzes revenue for different time periods
@@ -72,7 +71,6 @@ uvicorn app.main:app --reload
   - period1_end: First period end date
   - period2_start: Second period start date
   - period2_end: Second period end date
-  - category: (optional) Filter by category
 
 ### Inventory Endpoints
 

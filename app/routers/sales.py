@@ -32,7 +32,6 @@ def get_filtered_sales(
 ):
     return sale_crud.filter_sales(db, start_date, end_date, product_id, category)
 
-#revenue: daily, weekly, monthly, yearly
 @router.get("/revenue/aggregate")
 def revenue_aggregate(
     mode: str = Query(..., regex="^(daily|weekly|monthly|yearly)$"),
@@ -40,7 +39,6 @@ def revenue_aggregate(
 ):
     return sale_crud.aggregate_revenue(db, mode)
 
-#revenue between two periods
 @router.get("/revenue/compare")
 def revenue_compare(
     period1_start: date,
